@@ -14,7 +14,7 @@
 
 	display_order = JDO_MONK
 	give_bank_account = TRUE
-	min_pq = 0
+	min_pq = -100
 	max_pq = null
 
 /datum/outfit/job/roguetown/monk

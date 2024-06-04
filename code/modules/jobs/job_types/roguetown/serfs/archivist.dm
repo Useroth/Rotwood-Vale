@@ -12,7 +12,7 @@
 
 	outfit = /datum/outfit/job/roguetown/archivist
 	display_order = JDO_ARCHIVIST
-	min_pq = 0
+	min_pq = -100
 	max_pq = null
 
 /datum/outfit/job/roguetown/archivist

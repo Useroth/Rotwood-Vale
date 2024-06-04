@@ -9,7 +9,7 @@
 	outfit = /datum/outfit/job/roguetown/tailor
 	outfit_female = /datum/outfit/job/roguetown/tailor/female
 	display_order = 6
-	min_pq = 0
+	min_pq = -100
 	allowed_races = ALL_RACES_TYPES
 
 /datum/outfit/job/roguetown/tailor
