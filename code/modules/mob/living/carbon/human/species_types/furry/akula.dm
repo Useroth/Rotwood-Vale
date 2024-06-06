@@ -2,8 +2,9 @@
 	race = /datum/species/akula
 
 /datum/species/akula
-	name = "Akula"
+	name = "Axian"
 	id = "akula"
+	desc = "In time you will learn the history of this race"
 	species_traits = list(EYECOLOR,LIPS,STUBBLE,MUTCOLORS)
 	inherent_traits = list(TRAIT_NOMOBSWAP)
 	possible_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
@@ -57,6 +58,7 @@
 		/datum/customizer/bodypart_feature/hair/facial/humanoid,
 		/datum/customizer/bodypart_feature/accessory,
 		/datum/customizer/bodypart_feature/face_detail,
+		/datum/customizer/organ/snout/akula,
 		/datum/customizer/organ/testicles/anthro,
 		/datum/customizer/organ/penis/lizard,
 		/datum/customizer/organ/breasts/human,

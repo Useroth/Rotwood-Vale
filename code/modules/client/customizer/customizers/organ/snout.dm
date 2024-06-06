@@ -30,13 +30,21 @@
 	customizer_choices = list(/datum/customizer_choice/organ/snout/vulpkanin)
 
 /datum/customizer_choice/organ/snout/vulpkanin
-	name = "Vulpkanin Snout"
+	name = "Vulpkian Snout"
 	organ_type = /obj/item/organ/snout/vulpkanin
 	sprite_accessories = list(
 		/datum/sprite_accessory/snout/lcanid,
 		/datum/sprite_accessory/snout/lcanidalt,
 		/datum/sprite_accessory/snout/lcanidstriped,
 		/datum/sprite_accessory/snout/lcanidstripedalt,
+		/datum/sprite_accessory/snout/sharp,
+		/datum/sprite_accessory/snout/round,
+		/datum/sprite_accessory/snout/sharplight,
+		/datum/sprite_accessory/snout/roundlight,
+		/datum/sprite_accessory/snout/front/sharp,
+		/datum/sprite_accessory/snout/front/round,
+		/datum/sprite_accessory/snout/front/sharplight,
+		/datum/sprite_accessory/snout/front/roundlight,
 		)
 
 /datum/customizer/organ/snout/tajaran
@@ -54,7 +62,15 @@
 		/datum/sprite_accessory/snout/front/scanid,
 		/datum/sprite_accessory/snout/front/scanidalt,
 		/datum/sprite_accessory/snout/front/scanidalt2,
-		/datum/sprite_accessory/snout/front/scanidalt3,
+		/datum/sprite_accessory/snout/front/scanidalt3,		
+		/datum/sprite_accessory/snout/sharp,
+		/datum/sprite_accessory/snout/round,
+		/datum/sprite_accessory/snout/sharplight,
+		/datum/sprite_accessory/snout/roundlight,
+		/datum/sprite_accessory/snout/front/sharp,
+		/datum/sprite_accessory/snout/front/round,
+		/datum/sprite_accessory/snout/front/sharplight,
+		/datum/sprite_accessory/snout/front/roundlight,
 		)
 
 /datum/customizer/organ/snout/vox
@@ -85,7 +101,7 @@
 	customizer_choices = list(/datum/customizer_choice/organ/snout/anthro)
 
 /datum/customizer_choice/organ/snout/anthro
-	name = "Anthro Snout"
+	name = "Wild-Kin Snout"
 	organ_type = /obj/item/organ/snout/anthro
 	sprite_accessories = list(
 		/datum/sprite_accessory/snout/bird,
@@ -164,4 +180,48 @@
 		/datum/sprite_accessory/snout/front/redpanda,
 		/datum/sprite_accessory/snout/front/redpandaalt,
 		/datum/sprite_accessory/snout/front/skulldog,
+		/datum/sprite_accessory/snout/sharp,
+		/datum/sprite_accessory/snout/round,
+		/datum/sprite_accessory/snout/sharplight,
+		/datum/sprite_accessory/snout/roundlight,
+		/datum/sprite_accessory/snout/front/sharp,
+		/datum/sprite_accessory/snout/front/round,
+		/datum/sprite_accessory/snout/front/sharplight,
+		/datum/sprite_accessory/snout/front/roundlight,
+		)
+
+/datum/customizer/organ/snout/akula
+	customizer_choices = list(/datum/customizer_choice/organ/snout/akula)
+
+/datum/customizer_choice/organ/snout/akula
+	name = "Axian Snout"
+	organ_type = /obj/item/organ/snout/akula
+	sprite_accessories = list(
+		/datum/sprite_accessory/snout/sergal,
+		/datum/sprite_accessory/snout/sharp,
+		/datum/sprite_accessory/snout/round,
+		/datum/sprite_accessory/snout/sharplight,
+		/datum/sprite_accessory/snout/roundlight,
+		/datum/sprite_accessory/snout/front/sharp,
+		/datum/sprite_accessory/snout/front/round,
+		/datum/sprite_accessory/snout/front/sharplight,
+		/datum/sprite_accessory/snout/front/roundlight,
+		)
+
+/datum/customizer/organ/snout/tabaxi
+	customizer_choices = list(/datum/customizer_choice/organ/snout/tabaxi)
+
+/datum/customizer_choice/organ/snout/tabaxi
+	name = "Tabaxian Snout"
+	organ_type = /obj/item/organ/snout/cat
+	sprite_accessories = list(
+	    /datum/sprite_accessory/snout/cat,
+		/datum/sprite_accessory/snout/sharp,
+		/datum/sprite_accessory/snout/round,
+		/datum/sprite_accessory/snout/sharplight,
+		/datum/sprite_accessory/snout/roundlight,
+		/datum/sprite_accessory/snout/front/sharp,
+		/datum/sprite_accessory/snout/front/round,
+		/datum/sprite_accessory/snout/front/sharplight,
+		/datum/sprite_accessory/snout/front/roundlight,
 		)
