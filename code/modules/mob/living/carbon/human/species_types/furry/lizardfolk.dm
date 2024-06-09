@@ -4,16 +4,16 @@
 /datum/species/lizardfolk
 	name = "Sissean"
 	id = "lizardfolk"
-	desc = "<b>Lizardfolk</b><br>\
-	Lizardfolk are semi-aquatic reptilian humanoids.\
+	desc = "<b>Sissean</b><br>\
+	Sisseans are semi-aquatic reptilian humanoids.\
 	Their skin is covered in scales and varied in color from dark green through to shades of brown and gray.\
-	Taller than humans and powerfully built, lizardfolk are often between 6 and 7 feet tall.\
-	Lizardfolk have non-prehensile muscular tails that grow to three or four feet in length, and these are used for balance.\
+	Taller than humans and powerfully built, sisseans are often between 6 and 7 feet tall.\
+	Sisseans have non-prehensile muscular tails that grow to three or four feet in length, and these are used for balance.\
 	They also have sharp claws and teeth."
 	skin_tone_wording = "Skin Colors"
 	species_traits = list(EYECOLOR,LIPS,STUBBLE,MUTCOLORS)
 	inherent_traits = list(TRAIT_NOMOBSWAP)
-	possible_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	possible_ages = list(AGE_YOUNG, AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	limbs_icon_m = 'icons/roguetown/mob/bodies/m/mt.dmi'
 	limbs_icon_f = 'icons/roguetown/mob/bodies/f/fm.dmi'
@@ -61,6 +61,8 @@
 		)
 	customizers = list(
 		/datum/customizer/organ/eyes/humanoid,
+		/datum/customizer/bodypart_feature/hair/head/humanoid/bald_default,
+		/datum/customizer/bodypart_feature/hair/facial/humanoid/shaved_default,
 		/datum/customizer/bodypart_feature/accessory,
 		/datum/customizer/bodypart_feature/face_detail,
 		/datum/customizer/organ/tail/lizard,

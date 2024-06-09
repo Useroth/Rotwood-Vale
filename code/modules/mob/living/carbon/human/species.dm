@@ -130,7 +130,9 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	/// List of organ customizers for preferences to customize organs.
 	var/list/customizers
 	/// List of possible body marking sets that the player can choose from in customization
-	var/list/body_marking_sets
+	var/list/body_marking_sets = list(
+		/datum/body_marking_set/none,
+	)
 	/// List all of body markings that the player can choose from in customization. Body markings from sets get added to here
 	var/list/body_markings
 	var/list/languages = list(/datum/language/common)
@@ -264,11 +266,11 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	return returned
 
 //Will regenerate missing organs
-/datum/species/proc/regenerate_organs(mob/living/carbon/C, datum/species/old_species, replace_current=TRUE, list/excluded_zones, datum/preferences/pref_load, preserve_organs = FALSE)
-	/// Clear the dna
-	C.dna.organ_dna = list()
+/datum/species/proc/regenerate_organs(mob/living/carbon/C, datum/species/old_species, replace_current=TRUE, list/excluded_zones, datum/preferences/pref_load)
 	/// Add DNA and create organs from prefs
 	if(pref_load)
+		/// Clear the dna
+		C.dna.organ_dna = list()
 		var/list/organ_dna_list = pref_load.get_organ_dna_list()
 		for(var/organ_slot in organ_dna_list)
 			C.dna.organ_dna[organ_slot] = organ_dna_list[organ_slot]
@@ -285,17 +287,13 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		slots_to_iterate |= slot
 
 	// Remove the organs from the slots they should have nothing in
-	if(!preserve_organs)
-		for(var/obj/item/organ/organ in C.internal_organs)
-			if(slots_to_iterate[organ.slot])
-				continue
-			organ.Remove(C, TRUE)
-			QDEL_NULL(organ)
+	for(var/obj/item/organ/organ in C.internal_organs)
+		if(slots_to_iterate[organ.slot])
+			continue
+		organ.Remove(C, TRUE)
+		QDEL_NULL(organ)
 	for(var/slot in slots_to_iterate)
 		var/obj/item/organ/oldorgan = C.getorganslot(slot) //used in removing
-		if(oldorgan && preserve_organs)
-			oldorgan.setOrganDamage(0)
-			continue
 		var/obj/item/organ/neworgan
 
 		var/list/source_key_list = color_key_source_list_from_carbon(C)
@@ -482,6 +480,9 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 	for(var/language_type in languages)
 		C.remove_language(language_type)
+	
+	// Clear organ DNA since it wont match as we're changing the species
+	C.dna.organ_dna = list()
 
 	SEND_SIGNAL(C, COMSIG_SPECIES_LOSS, src)
 
